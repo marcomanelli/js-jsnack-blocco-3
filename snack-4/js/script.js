@@ -13,7 +13,7 @@ $(function(){
   console.log(n)
 
   function generateCode() {
-    var temp = 0
+    var temp = ''
 
     for(var i=0; i<3; i++){
       temp += generateRandomLetter() 
@@ -22,6 +22,8 @@ $(function(){
     for(var i=0; i<3; i++){
       temp += generateRandomNumber() 
     }
+
+    return temp
   }
 
   function generateRandomNumber() {
