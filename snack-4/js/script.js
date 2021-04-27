@@ -1,33 +1,43 @@
 $(function(){
 
-  var giocatori = [
-    {
-      codice: 'ABC123',
-      punti: 0,
-      percentuale: 0,
+  var giocatori = []
+
+  var numGiocatori = 5
+
+  //creazione giocatori
+  for(var i=0; i<numGiocatori; i++){
+    var giocatore = {
+      codice: generateCode(),
+      punti: generateRandomNumber50(),
+      percentuale: generateRandomNumber100()
     }
-  ]
+    giocatori.push(giocatore)
+  }
 
-  var n = generateCode()
+  console.log(giocatori)
 
-  console.log(n)
-
+  //funzioni
   function generateCode() {
     var temp = ''
-
     for(var i=0; i<3; i++){
       temp += generateRandomLetter() 
     }
-
     for(var i=0; i<3; i++){
-      temp += generateRandomNumber() 
+      temp += generateRandomNumber10() 
     }
-
     return temp
   }
 
-  function generateRandomNumber() {
+  function generateRandomNumber10() {
     return Math.floor((Math.random() * 10))
+  }
+
+  function generateRandomNumber50() {
+    return Math.floor((Math.random() * 51))
+  }
+
+  function generateRandomNumber100() {
+    return Math.floor((Math.random() * 101))
   }
 
   function generateRandomLetter() {
