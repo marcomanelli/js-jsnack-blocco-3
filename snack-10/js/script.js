@@ -12,7 +12,7 @@ Es:
 	‘Luigi Verdi non può guidare’,
 	‘Silvia Neri può guidare’,
 ] */
-$(function(){
+/* $(function(){
 
   const persone = [
     { nome: 'Mario', cognome: 'Rossi', eta: 60 },
@@ -29,6 +29,27 @@ $(function(){
       console.log(`
         ${persona.nome} ${persona.cognome} non può guidare
       `)
+    }
+  })
+
+  console.log(maggiorenni)
+}) */
+
+$(function(){
+
+  const persone = [
+    { nome: 'Mario', cognome: 'Rossi', eta: 60 },
+    { nome: 'Luigi', cognome: 'Verdi', eta: 12 },
+    { nome: 'Silvia', cognome: 'Neri', eta: 25 },
+  ]
+
+  const maggiorenni = []
+  
+  persone.forEach((persona) => {
+    if(persona.eta >= 18){
+      maggiorenni.push(persona.nome + ' ' + persona.cognome + ' può guidare')
+    }else{
+      maggiorenni.push(persona.nome + ' ' + persona.cognome + ' non può guidare')
     }
   })
 
