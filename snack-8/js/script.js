@@ -5,10 +5,10 @@ $(function(){
   const lista = ['pippo', 'PLUTO', 'Paperino']
 
   const listaCap = lista.map((stringa) => {
-    stringa.toLowerCase()
+    let temp = stringa.toLowerCase()
 
-    stringa.charAt(0).toUpperCase() + stringa.slice(1)
-    return stringa
+    temp = temp.charAt(0).toUpperCase() + temp.slice(1)
+    return temp
   })
 
   console.log(listaCap)
